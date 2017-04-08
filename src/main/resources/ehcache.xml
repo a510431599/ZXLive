@@ -1,0 +1,29 @@
+<ehcache name="ehcache">
+    <diskStore path="paas-management-platform"/>
+
+    <defaultCache
+            maxElementsInMemory="100000"
+            eternal="false"
+            overflowToDisk="true"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="0"
+            diskPersistent="true"
+            diskExpiryThreadIntervalSeconds="120"/>
+    <!-- See http://ehcache.sourceforge.net/documentation/#mozTocId258426 for how to configure caching for your objects -->
+    <cache   
+        name="system_user_menu"  
+        memoryStoreEvictionPolicy="LRU"   
+        maxElementsInMemory="1"   
+        eternal="false"  
+        timeToIdleSeconds="7200"  
+        timeToLiveSeconds="7200"   
+        overflowToDisk="false" /> 
+	<cache   
+        name="system_user"  
+        memoryStoreEvictionPolicy="LRU"   
+        maxElementsInMemory="1"   
+        eternal="false"  
+        timeToIdleSeconds="7200"  
+        timeToLiveSeconds="7200"   
+        overflowToDisk="false" /> 
+</ehcache>
